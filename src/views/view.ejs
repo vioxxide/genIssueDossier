@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title><%= issue.topic %></title>
+      <link href="/bootstrap.min.css" rel="stylesheet">
+    </head>
+    <body>
+      <div class="container mt-5">
+        <h1><%= issue.topic %></h1>
+        <% Object.keys(issue.data).forEach(prompt => { %>
+          <h2><%= prompt %></h2>
+          <p><%= issue.data[prompt] %></p>
+        <% }) %>
+
+        <a href="/" class="btn btn-secondary mt-3">Back to Home</a>
+      </div>
+    </body>
+    </html>
